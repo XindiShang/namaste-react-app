@@ -1,19 +1,36 @@
 .header {
   display: flex;
+  border: 1px solid #ccc;
 }
 
 .logo-container {
   flex: 1;
 }
 
+.logo-container .logo {
+  width: 120px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
 .navigation {
   flex: 3;
+  display: flex;
+  justify-content: space-between;
 }
 
 .nav-items {
   display: flex;
   gap: 1rem;
   list-style: none;
+}
+
+.nav-button {
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  height: 2rem;
 }
 
 .restaurant-container {
@@ -58,4 +75,29 @@
 .filter-btn:active {
   transform: translate(0.015rem, 0.075rem);
   box-shadow: 0 0.15rem 0.15rem rgba(0, 0, 0, 0.2);
+}
+
+/* Skleton */
+.shimmer-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.shimmer-card {
+  width: 200px;
+  height: 400px;
+  background-color: #ccc;
+  animation: shimmer 1s infinite linear forwards;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+    background-color: #ccc;
+  }
+  100% {
+    background-position: 200px 0;
+    background-color: #ddd;
+  }
 }
