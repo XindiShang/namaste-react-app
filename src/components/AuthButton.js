@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const AuthButton = () => {
   const [isLoggedIn, setIsLoggedIn] = React.useState(false);
 
   console.log('auth button rendered')
+
+  useEffect(() => {
+    console.log('auth button mounted')
+  }, [])
 
   const onButtonClick = () => {
     setIsLoggedIn(!isLoggedIn);
